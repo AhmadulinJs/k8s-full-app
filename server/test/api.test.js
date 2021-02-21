@@ -38,4 +38,19 @@ describe('Tests Todo APIs', () => {
         done();
       });
   });
+
+  it('Should list a todo', function(done) {
+    
+    chai.hr({
+      app,
+      description: this.test.title,
+      path: `${todoHost}/`,
+      method: 'get',
+    })
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.should.be.a('Object');
+        done();
+      });
+  });
 });
