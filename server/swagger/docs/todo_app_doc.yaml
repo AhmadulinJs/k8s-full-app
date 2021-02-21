@@ -26,3 +26,27 @@
                   type: "boolean"
                 __v:
                   type: "integer"
+  get:
+    tags:
+      - "TODOS"
+    parameters: []
+    responses:
+      200:
+        description: "OK"
+        content:
+          application/json:
+            schema:
+              type: "array"
+              items:
+                type: "object"
+                properties:
+                  _id:
+                    type: "string"
+                  todo_description:
+                    type: "string"
+                  todo_priority:
+                    type: "string"
+                  todo_completed:
+                    type: "boolean"
+                  __v:
+                    type: "integer"
