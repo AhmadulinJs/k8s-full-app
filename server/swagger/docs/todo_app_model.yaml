@@ -1,0 +1,11 @@
+components:
+  schemas:
+    todos_post:
+      type: "object"
+      properties:
+        todo_description:
+          type: "string"
+        todo_priority:
+          type: "string"
+        todo_completed:
+          type: "boolean"

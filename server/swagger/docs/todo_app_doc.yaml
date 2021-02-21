@@ -1,0 +1,28 @@
+/todos/:
+  post:
+    tags:
+      - "TODOS"
+    parameters: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/todos_post"
+    responses:
+      200:
+        description: "OK"
+        content:
+          application/json:
+            schema:
+              type: "object"
+              properties:
+                _id:
+                  type: "string"
+                todo_description:
+                  type: "string"
+                todo_priority:
+                  type: "string"
+                todo_completed:
+                  type: "boolean"
+                __v:
+                  type: "integer"
